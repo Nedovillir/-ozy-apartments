@@ -1,195 +1,438 @@
-'use strict';
+ 'use strict';
 
-const english = {
-  skip: 'Skip to content', navApartment: 'The apartment', navAmenities: 'Amenities',
-  navGallery: 'Gallery', navLocation: 'Location', navBooking: 'Book your stay',
-  heroEyebrow: 'YOUR ADDRESS IN VILNIUS', heroTitle1: 'Cozy apartments,', heroTitle2: 'old town',
-  heroDescription: 'A cosy apartment on Pylimo Street. For slow weekends, walks through the Old Town, and evenings that are entirely your own.',
-  explore: 'Explore the apartment', heroBook: 'Choose your dates', heroLocation: 'Pylimo · Central Vilnius',
-  heroPhotoCaption: 'A LITTLE PLACE. A LOVELY STAY.', insetCaption: 'Come in. Make yourself at home.',
-  stripLocation: 'In the city centre', stripKitchen: 'Your own kitchenette', stripWifi: 'Complimentary Wi-Fi', stripLift: 'Elevator in the building',
-  apartmentEyebrow: 'A SMALL SPACE. A WARM WELCOME.', apartmentTitle1: 'Your little home', apartmentTitle2: 'in the city.',
-  apartmentBody1: 'Warm light, a window under the eaves, and the essentials close at hand. Start the morning with coffee, head out to explore Vilnius, and come back to a space of your own.',
-  apartmentBody2: 'The apartment is on Pylimo Street, in the former Hotel Aleksa building. A comfortable base for a trip for two or a visit for work.',
-  seeAmenities: 'Inside the apartment', kitchenNote: 'Coffee. And no plans.',
-  amenitiesEyebrow: 'SETTLE RIGHT IN', amenitiesTitle: 'The comforts of a good stay.', amenitiesIntro: 'The little essentials are already here. All that’s left is to unpack.',
-  bedTitle: 'Sofa bed', bedDescription: 'A double sleeping space', kitchenTitle: 'Kitchenette', kitchenDescription: 'Tableware and a kettle',
-  wifiTitle: 'Complimentary Wi-Fi', wifiDescription: 'Stay connected', tvTitle: 'Television', tvDescription: 'For a quiet evening',
-  bathTitle: 'Private bathroom', bathDescription: 'Your own shower', linenTitle: 'Linen and towels', linenDescription: 'Ready for your arrival',
-  coffeeTitle: 'Coffee and tea', coffeeDescription: 'A gentle start to the day', liftTitle: 'Elevator', liftDescription: 'In the apartment building',
-  galleryEyebrow: 'TAKE A CLOSER LOOK', galleryTitle: 'A feeling, in the details.', allPhotos: 'All 13 photos',
-  galleryApartment: 'Your space', galleryKitchen: 'Kitchenette', galleryBathroom: 'Bathroom', galleryWindow: 'The view', galleryBuilding: 'Building entrance', morePhotos: '+8 photos',
-  galleryFootnote: 'Real photographs of the apartment. The full gallery also shows the entrance, elevator and shared areas of the building.',
-  locationEyebrow: 'THE CITY IS JUST OUTSIDE', locationTitle1: 'Step out the door.', locationTitle2: 'Step into Vilnius.',
-  locationBody: 'Pylimo Street is a convenient starting point for exploring the city. The Old Town, cafés, restaurants, and the bus and train stations are nearby.',
-  addressBuilding: 'The former Hotel Aleksa building', openMap: 'Find Pylimo Street on the map', locationPhotoLabel: 'VILNIUS, LITHUANIA',
-  bookingEyebrow: 'STAY A LITTLE', bookingTitle1: 'Make your next trip', bookingTitle2: 'a stay with us.',
-  bookingSubtitle: 'A good stay starts with a date.', bookingBody: 'Choose your travel dates and number of guests on Airbnb to see availability, the total price and the terms of your stay.',
-  bookButton: 'Choose dates on Airbnb', checkinNote: 'Self check-in with a key lockbox.',
-  bookingNote: 'The Airbnb listing is categorised as a room with a private attached bathroom. Shared building areas are shown in the gallery.',
-  footerLine: 'Your little home in Vilnius.', backTop: 'Back to top', footerLocation: 'Vilnius, Lithuania', galleryKeyboard: '← → browse · Esc close'
+const translations = {
+  ru: {
+    skip:'К содержимому', mainNav:'Основная навигация', openMenu:'Открыть меню', closeMenu:'Закрыть меню',
+    navAbout:'О квартире', navAmenities:'Удобства', navGallery:'Галерея', navReviews:'Отзывы', navLocation:'Расположение',
+    book:'Забронировать', heroEyebrow:'ВАШЕ МЕСТО В ВИЛЬНЮСЕ', heroTitle1:'Небольшая квартира.', heroTitle2:'Большое чувство уюта.',
+    heroText:'Светлая мансардная квартира на улице Пилимо — рядом со Старым городом, вокзалами, кафе и прогулочными маршрутами.',
+    chooseDates:'Выбрать даты', seePhotos:'Смотреть фото', heroMetaCenter:'центр города', heroMetaWifi:'бесплатно',
+    heroMetaCheckin:'мини‑сейф с ключом', openApartmentPhoto:'Открыть фотографию квартиры', openWindowPhoto:'Открыть вид из окна',
+    insideApartment:'В квартире', vilniusLithuania:'Вильнюс, Литва', featureCenter:'Центр Вильнюса',
+    featureCenterSub:'Пилимо, рядом со Старым городом', featureKitchen:'Мини‑кухня', featureKitchenSub:'чайник, посуда, кофе и чай',
+    featureLift:'Лифт', featureLiftSub:'в здании', featureBathroom:'Своя ванная', featureBathroomSub:'душ, полотенца и бельё',
+    goodFor:'ИДЕАЛЬНО ДЛЯ', goodForText:'пары · деловой поездки · короткого отдыха', aboutEyebrow:'ПРОСТРАНСТВО ДЛЯ ВАШЕЙ ПОЕЗДКИ',
+    aboutTitle:'Всё нужное — и ничего лишнего.', aboutText1:'Тёплый свет, мансардное окно, удобное спальное место и небольшая кухня создают спокойную атмосферу после насыщенного дня в городе.',
+    aboutText2:'Квартира находится на улице Пилимо, в здании бывшего Hotel Aleksa. Удобное расположение позволяет быстро добраться до центра, вокзалов и основных достопримечательностей.',
+    viewAmenities:'Посмотреть все удобства', amenitiesEyebrow:'КОМФОРТ В ДЕТАЛЯХ', amenitiesTitle:'Всё готово к вашему приезду.',
+    amenitiesLead:'Приезжайте налегке — основные вещи уже будут ждать вас в квартире.', aBed:'Диван‑кровать',
+    aBedText:'Двуспальное место для комфортного отдыха.', aKitchen:'Мини‑кухня', aKitchenText:'Посуда, чайник и всё для простого завтрака.',
+    aWifi:'Бесплатный Wi‑Fi', aWifiText:'Для работы, общения и планирования маршрутов.', aTv:'Телевизор',
+    aTvText:'Для спокойного вечера после прогулки.', aBath:'Своя ванная', aBathText:'Душ находится прямо в квартире.',
+    aLinen:'Бельё и полотенца', aLinenText:'Подготовлены перед вашим приездом.', aCoffee:'Кофе и чай',
+    aCoffeeText:'Небольшой приятный бонус для вашего утра.', aLift:'Лифт', aLiftText:'Удобный доступ к этажу квартиры.',
+    galleryEyebrow:'ПОСМОТРИТЕ БЛИЖЕ', galleryTitle:'Квартира в деталях.', allPhotos:'Все 13 фото', gApartment:'Интерьер',
+    gKitchen:'Мини‑кухня', gBathroom:'Ванная', gWindow:'Вид из окна', gBuilding:'Здание', reviewsEyebrow:'ОТЗЫВЫ ГОСТЕЙ',
+    reviewsTitle:'Поделитесь впечатлением.', reviewsLead:'Если вы уже останавливались у нас, оставьте несколько слов — это поможет будущим гостям.',
+    leaveReview:'Оставить отзыв', reviewsEmptyTitle:'Здесь появятся ваши отзывы',
+    reviewsEmptyText:'Будьте первым гостем, который поделится впечатлением на этом сайте.', locationEyebrow:'ГОРОД НАЧИНАЕТСЯ ЗА ДВЕРЬЮ',
+    locationTitle1:'Пилимо.', locationTitle2:'Удобная точка для Вильнюса.', locationText:'Старый город, кафе, рестораны, автобусный и железнодорожный вокзалы находятся неподалёку. Удобно и для прогулок, и для коротких деловых поездок.',
+    formerHotel:'Здание бывшего Hotel Aleksa', openMap:'Открыть на карте', bookingEyebrow:'ГОТОВЫ К ПОЕЗДКЕ?',
+    bookingTitle:'Выберите даты и приезжайте в Вильнюс.', bookingText:'Актуальную стоимость, доступные даты и условия бронирования можно посмотреть на Airbnb.',
+    bookAirbnb:'Забронировать на Airbnb', checkinText:'Самостоятельное заселение · ключ в мини‑сейфе',
+    footerLine:'Небольшое место для хорошей поездки.', backTop:'Наверх', galleryDialogLabel:'ГАЛЕРЕЯ', close:'Закрыть',
+    previous:'Предыдущее фото', next:'Следующее фото', reviewFormLabel:'ВАШЕ ВПЕЧАТЛЕНИЕ', reviewFormTitle:'Оставить отзыв',
+    reviewFormIntro:'Оцените проживание и напишите пару слов о поездке.', ratingLabel:'Ваша оценка', nameLabel:'Ваше имя',
+    namePlaceholder:'Имя', reviewLabel:'Отзыв', reviewPlaceholder:'Что вам понравилось?', publishReview:'Опубликовать отзыв',
+    storageNote:'На этой версии сайта отзыв сохраняется в браузере этого устройства.', ratingError:'Выберите оценку от 1 до 5 звёзд.',
+    formError:'Заполните имя и текст отзыва.', reviewSaved:'Спасибо! Отзыв добавлен на этом устройстве.', guest:'Гость'
+  },
+  en: {
+    skip:'Skip to content', mainNav:'Main navigation', openMenu:'Open menu', closeMenu:'Close menu',
+    navAbout:'Apartment', navAmenities:'Amenities', navGallery:'Gallery', navReviews:'Reviews', navLocation:'Location',
+    book:'Book now', heroEyebrow:'YOUR PLACE IN VILNIUS', heroTitle1:'A small apartment.', heroTitle2:'A big sense of comfort.',
+    heroText:'A bright attic apartment on Pylimo Street — close to the Old Town, stations, cafés and the best routes for exploring the city.',
+    chooseDates:'Choose dates', seePhotos:'View photos', heroMetaCenter:'city centre', heroMetaWifi:'complimentary',
+    heroMetaCheckin:'key lockbox', openApartmentPhoto:'Open apartment photo', openWindowPhoto:'Open window view',
+    insideApartment:'Inside the apartment', vilniusLithuania:'Vilnius, Lithuania', featureCenter:'Central Vilnius',
+    featureCenterSub:'Pylimo, near the Old Town', featureKitchen:'Kitchenette', featureKitchenSub:'kettle, tableware, coffee and tea',
+    featureLift:'Elevator', featureLiftSub:'in the building', featureBathroom:'Private bathroom', featureBathroomSub:'shower, towels and linen',
+    goodFor:'PERFECT FOR', goodForText:'couples · business trips · short city breaks', aboutEyebrow:'A SPACE FOR YOUR TRIP',
+    aboutTitle:'Everything you need. Nothing you do not.', aboutText1:'Warm light, an attic window, a comfortable sleeping space and a compact kitchen make it easy to unwind after a full day in the city.',
+    aboutText2:'The apartment is on Pylimo Street, in the former Hotel Aleksa building. Its convenient location keeps the centre, stations and key sights within easy reach.',
+    viewAmenities:'See all amenities', amenitiesEyebrow:'COMFORT IN THE DETAILS', amenitiesTitle:'Ready for your arrival.',
+    amenitiesLead:'Travel light — the everyday essentials will already be waiting for you.', aBed:'Sofa bed',
+    aBedText:'A double sleeping space for a comfortable rest.', aKitchen:'Kitchenette', aKitchenText:'Tableware, kettle and the basics for a simple breakfast.',
+    aWifi:'Complimentary Wi‑Fi', aWifiText:'For work, messages and planning your route.', aTv:'Television',
+    aTvText:'For a quiet evening after a day out.', aBath:'Private bathroom', aBathText:'Your own shower inside the apartment.',
+    aLinen:'Linen and towels', aLinenText:'Prepared before your arrival.', aCoffee:'Coffee and tea',
+    aCoffeeText:'A small extra to make mornings easier.', aLift:'Elevator', aLiftText:'Convenient access to the apartment floor.',
+    galleryEyebrow:'TAKE A CLOSER LOOK', galleryTitle:'The apartment in detail.', allPhotos:'All 13 photos', gApartment:'Interior',
+    gKitchen:'Kitchenette', gBathroom:'Bathroom', gWindow:'Window view', gBuilding:'Building', reviewsEyebrow:'GUEST REVIEWS',
+    reviewsTitle:'Share your stay.', reviewsLead:'If you have stayed with us, leave a few words to help future guests.',
+    leaveReview:'Leave a review', reviewsEmptyTitle:'Your reviews will appear here',
+    reviewsEmptyText:'Be the first guest to share an impression on this website.', locationEyebrow:'THE CITY STARTS OUTSIDE YOUR DOOR',
+    locationTitle1:'Pylimo.', locationTitle2:'A convenient base in Vilnius.', locationText:'The Old Town, cafés, restaurants, bus station and railway station are nearby — convenient for both city walks and short business trips.',
+    formerHotel:'Former Hotel Aleksa building', openMap:'Open in maps', bookingEyebrow:'READY TO TRAVEL?',
+    bookingTitle:'Choose your dates and come to Vilnius.', bookingText:'See current rates, available dates and booking terms on Airbnb.',
+    bookAirbnb:'Book on Airbnb', checkinText:'Self check‑in · key in a lockbox',
+    footerLine:'A small place for a good trip.', backTop:'Back to top', galleryDialogLabel:'GALLERY', close:'Close',
+    previous:'Previous photo', next:'Next photo', reviewFormLabel:'YOUR EXPERIENCE', reviewFormTitle:'Leave a review',
+    reviewFormIntro:'Rate your stay and write a few words about your trip.', ratingLabel:'Your rating', nameLabel:'Your name',
+    namePlaceholder:'Name', reviewLabel:'Review', reviewPlaceholder:'What did you enjoy?', publishReview:'Publish review',
+    storageNote:'In this version, the review is stored in this device’s browser.', ratingError:'Choose a rating from 1 to 5 stars.',
+    formError:'Please enter your name and review.', reviewSaved:'Thank you! Your review was added on this device.', guest:'Guest'
+  },
+  lt: {
+    skip:'Pereiti prie turinio', mainNav:'Pagrindinė navigacija', openMenu:'Atidaryti meniu', closeMenu:'Uždaryti meniu',
+    navAbout:'Apie apartamentus', navAmenities:'Patogumai', navGallery:'Galerija', navReviews:'Atsiliepimai', navLocation:'Vieta',
+    book:'Rezervuoti', heroEyebrow:'JŪSŲ VIETA VILNIUJE', heroTitle1:'Nedideli apartamentai.', heroTitle2:'Daug jaukumo.',
+    heroText:'Šviesūs mansardiniai apartamentai Pylimo gatvėje — netoli Senamiesčio, stočių, kavinių ir patogių maršrutų po Vilnių.',
+    chooseDates:'Pasirinkti datas', seePhotos:'Žiūrėti nuotraukas', heroMetaCenter:'miesto centras', heroMetaWifi:'nemokamas',
+    heroMetaCheckin:'raktų dėžutė', openApartmentPhoto:'Atidaryti apartamentų nuotrauką', openWindowPhoto:'Atidaryti vaizdą pro langą',
+    insideApartment:'Apartamentuose', vilniusLithuania:'Vilnius, Lietuva', featureCenter:'Vilniaus centras',
+    featureCenterSub:'Pylimo g., šalia Senamiesčio', featureKitchen:'Mini virtuvė', featureKitchenSub:'virdulys, indai, kava ir arbata',
+    featureLift:'Liftas', featureLiftSub:'pastate', featureBathroom:'Privatus vonios kambarys', featureBathroomSub:'dušas, rankšluosčiai ir patalynė',
+    goodFor:'PUIKIAI TINKA', goodForText:'porai · darbo kelionei · trumpam poilsiui', aboutEyebrow:'ERDVĖ JŪSŲ KELIONEI',
+    aboutTitle:'Viskas, ko reikia. Nieko nereikalingo.', aboutText1:'Šilta šviesa, mansardos langas, patogi miegamoji vieta ir nedidelė virtuvė padeda ramiai pailsėti po dienos mieste.',
+    aboutText2:'Apartamentai yra Pylimo gatvėje, buvusio Hotel Aleksa pastate. Patogi vieta leidžia lengvai pasiekti centrą, stotis ir svarbiausias miesto vietas.',
+    viewAmenities:'Peržiūrėti visus patogumus', amenitiesEyebrow:'KOMFORTAS DETALĖSE', amenitiesTitle:'Viskas paruošta jūsų atvykimui.',
+    amenitiesLead:'Keliaukite lengviau — svarbiausi dalykai jūsų jau lauks apartamentuose.', aBed:'Sofa‑lova',
+    aBedText:'Dvigulė miegamoji vieta patogiam poilsiui.', aKitchen:'Mini virtuvė', aKitchenText:'Indai, virdulys ir pagrindiniai dalykai paprastiems pusryčiams.',
+    aWifi:'Nemokamas Wi‑Fi', aWifiText:'Darbui, bendravimui ir maršrutų planavimui.', aTv:'Televizorius',
+    aTvText:'Ramiam vakarui po pasivaikščiojimo.', aBath:'Privatus vonios kambarys', aBathText:'Nuosavas dušas apartamentuose.',
+    aLinen:'Patalynė ir rankšluosčiai', aLinenText:'Paruošiami prieš jūsų atvykimą.', aCoffee:'Kava ir arbata',
+    aCoffeeText:'Maloni smulkmena gerai ryto pradžiai.', aLift:'Liftas', aLiftText:'Patogus patekimas į apartamentų aukštą.',
+    galleryEyebrow:'PAŽVELKITE IŠ ARČIAU', galleryTitle:'Apartamentai iš arčiau.', allPhotos:'Visos 13 nuotraukų', gApartment:'Interjeras',
+    gKitchen:'Mini virtuvė', gBathroom:'Vonios kambarys', gWindow:'Vaizdas pro langą', gBuilding:'Pastatas', reviewsEyebrow:'SVEČIŲ ATSILIEPIMAI',
+    reviewsTitle:'Pasidalykite įspūdžiais.', reviewsLead:'Jei jau viešėjote pas mus, parašykite kelis žodžius — tai padės būsimiems svečiams.',
+    leaveReview:'Palikti atsiliepimą', reviewsEmptyTitle:'Čia pasirodys jūsų atsiliepimai',
+    reviewsEmptyText:'Būkite pirmasis svečias, pasidalijęs įspūdžiais šiame puslapyje.', locationEyebrow:'MIESTAS PRASIDEDA UŽ DURŲ',
+    locationTitle1:'Pylimo gatvė.', locationTitle2:'Patogi vieta Vilniuje.', locationText:'Senamiestis, kavinės, restoranai, autobusų ir geležinkelio stotys yra netoliese — patogu ir pasivaikščiojimams, ir trumpoms darbo kelionėms.',
+    formerHotel:'Buvusio Hotel Aleksa pastatas', openMap:'Atidaryti žemėlapyje', bookingEyebrow:'PASIRUOŠĘ KELIONEI?',
+    bookingTitle:'Pasirinkite datas ir atvykite į Vilnių.', bookingText:'Aktualias kainas, laisvas datas ir rezervavimo sąlygas rasite Airbnb.',
+    bookAirbnb:'Rezervuoti per Airbnb', checkinText:'Savarankiškas atvykimas · raktas dėžutėje',
+    footerLine:'Nedidelė vieta gerai kelionei.', backTop:'Į viršų', galleryDialogLabel:'GALERIJA', close:'Uždaryti',
+    previous:'Ankstesnė nuotrauka', next:'Kita nuotrauka', reviewFormLabel:'JŪSŲ ĮSPŪDIS', reviewFormTitle:'Palikti atsiliepimą',
+    reviewFormIntro:'Įvertinkite viešnagę ir parašykite kelis žodžius apie kelionę.', ratingLabel:'Jūsų įvertinimas', nameLabel:'Jūsų vardas',
+    namePlaceholder:'Vardas', reviewLabel:'Atsiliepimas', reviewPlaceholder:'Kas jums patiko?', publishReview:'Paskelbti atsiliepimą',
+    storageNote:'Šioje versijoje atsiliepimas išsaugomas šio įrenginio naršyklėje.', ratingError:'Pasirinkite įvertinimą nuo 1 iki 5 žvaigždučių.',
+    formError:'Įrašykite vardą ir atsiliepimo tekstą.', reviewSaved:'Ačiū! Atsiliepimas pridėtas šiame įrenginyje.', guest:'Svečias'
+  }
 };
 
-const englishAttributes = {
-  navLabel: 'Main navigation', menuLabel: 'Open menu', heroPhotoLabel: 'Open photo: view from the window',
-  roomPhotoLabel: 'Open photo: apartment interior', highlightsLabel: 'Apartment highlights',
-  diningPhotoLabel: 'Open photo: dining area', kitchenPhotoLabel: 'Open photo: kitchenette',
-  bathPhotoLabel: 'Open photo: bathroom', buildingPhotoLabel: 'Open photo: building entrance',
-  closeGallery: 'Close gallery', previousPhoto: 'Previous photo', nextPhoto: 'Next photo', thumbnailsLabel: 'Photographs',
-  windowAlt: 'View of trees and Vilnius buildings through the attic window',
-  apartmentAlt: 'Attic apartment with a sofa, dining table and window', diningAlt: 'Round table for two under the sloping ceiling',
-  kitchenAlt: 'Kitchenette with a sink, kettle and warm lighting', bathroomAlt: 'Private bathroom with a mirror and washbasin',
-  buildingAlt: 'Entrance to the building with the Aleksa sign'
+const photoNames = {
+  window:{ru:'Вид из окна',en:'Window view',lt:'Vaizdas pro langą'},
+  apartment:{ru:'Интерьер квартиры',en:'Apartment interior',lt:'Apartamentų interjeras'},
+  kitchen:{ru:'Мини‑кухня',en:'Kitchenette',lt:'Mini virtuvė'},
+  dining:{ru:'Столик на двоих',en:'Table for two',lt:'Staliukas dviem'},
+  sofa:{ru:'Диван‑кровать',en:'Sofa bed',lt:'Sofa‑lova'},
+  shower:{ru:'Душ',en:'Shower',lt:'Dušas'},
+  bathroom:{ru:'Ванная комната',en:'Bathroom',lt:'Vonios kambarys'},
+  entrance:{ru:'Прихожая квартиры',en:'Apartment entrance',lt:'Apartamentų prieškambaris'},
+  building:{ru:'Вход в здание',en:'Building entrance',lt:'Įėjimas į pastatą'},
+  lobby:{ru:'Холл здания',en:'Building lobby',lt:'Pastato holas'},
+  stairs:{ru:'Лестница',en:'Staircase',lt:'Laiptinė'},
+  lift:{ru:'Лифт',en:'Elevator',lt:'Liftas'},
+  corridor:{ru:'Общий коридор',en:'Shared corridor',lt:'Bendras koridorius'}
 };
 
-const photos = [
-  {file:'window',ru:'Вид из окна',en:'The view from your window',area:'apartment'},
-  {file:'apartment',ru:'Интерьер квартиры',en:'Inside the apartment',area:'apartment'},
-  {file:'kitchen',ru:'Мини-кухня',en:'The kitchenette',area:'apartment'},
-  {file:'dining',ru:'Столик на двоих',en:'A table for two',area:'apartment'},
-  {file:'sofa',ru:'Диван-кровать',en:'The sofa bed',area:'apartment'},
-  {file:'shower',ru:'Душ',en:'The shower',area:'apartment'},
-  {file:'bathroom',ru:'Ванная комната',en:'The private bathroom',area:'apartment'},
-  {file:'entrance',ru:'Прихожая квартиры',en:'The apartment entrance',area:'apartment'},
-  {file:'building',ru:'Вход в здание',en:'The building entrance',area:'building'},
-  {file:'lobby',ru:'Холл здания',en:'The building lobby',area:'building'},
-  {file:'stairs',ru:'Лестница в здании',en:'The building staircase',area:'building'},
-  {file:'lift',ru:'Лифт в здании',en:'The building elevator',area:'building'},
-  {file:'corridor',ru:'Общий коридор',en:'The shared corridor',area:'building'}
-];
-
-const translatedNodes = [...document.querySelectorAll('[data-t]')];
-const russian = Object.fromEntries(translatedNodes.map(node => [node.dataset.t, node.innerHTML.replace(/<br\s*\/?>(\s*)/gi, ' ').replace(/<[^>]*>/g, '')]));
-const labelNodes = [...document.querySelectorAll('[data-label]')];
-const altNodes = [...document.querySelectorAll('[data-alt]')];
-const russianAttributes = Object.fromEntries([
-  ...labelNodes.map(node => [node.dataset.label, node.getAttribute('aria-label')]),
-  ...altNodes.map(node => [node.dataset.alt, node.getAttribute('alt')])
-]);
+const photoFiles = Object.keys(photoNames);
 let language = 'ru';
 let photoIndex = 0;
-let opener = null;
-const languageButton = document.getElementById('language');
-const menu = document.getElementById('menu');
-const navigation = document.getElementById('navigation');
-const lightbox = document.getElementById('lightbox');
-const lightboxImage = document.getElementById('lightbox-image');
-const thumbnails = document.getElementById('lightbox-thumbnails');
-const titleElement = document.getElementById('lightbox-title');
-const categoryElement = document.getElementById('lightbox-category');
-const counterElement = document.getElementById('lightbox-counter');
+let rating = 0;
 
-function setLanguage(nextLanguage) {
-  language = nextLanguage === 'en' ? 'en' : 'ru';
+const $ = (selector, root=document) => root.querySelector(selector);
+const $$ = (selector, root=document) => [...root.querySelectorAll(selector)];
+
+const header = $('#site-header');
+const progress = $('#scroll-progress');
+const mobileButton = $('#mobile-menu-button');
+const mobileMenu = $('#mobile-menu');
+const langTrigger = $('#language-trigger');
+const langMenu = $('#language-menu');
+const langCode = $('#language-code');
+const galleryDialog = $('#gallery-dialog');
+const galleryImage = $('#gallery-image');
+const galleryCaption = $('#gallery-caption');
+const galleryCounter = $('#gallery-counter');
+const galleryThumbs = $('#gallery-thumbs');
+const reviewDialog = $('#review-dialog');
+const reviewForm = $('#review-form');
+const reviewText = $('#review-text');
+const reviewCount = $('#review-count');
+const reviewError = $('#review-error');
+const reviewsList = $('#reviews-list');
+const reviewsEmpty = $('#reviews-empty');
+const toast = $('#toast');
+
+function safeStore(key, value){
+  try{ localStorage.setItem(key, value); }catch(_){}
+}
+
+function safeRead(key, fallback=null){
+  try{ return localStorage.getItem(key) ?? fallback; }catch(_){ return fallback; }
+}
+
+function setLanguage(next){
+  language = ['ru','en','lt'].includes(next) ? next : 'ru';
   document.documentElement.lang = language;
-  const copy = language === 'en' ? english : russian;
-  const attributes = language === 'en' ? englishAttributes : russianAttributes;
-  translatedNodes.forEach(node => { if (copy[node.dataset.t]) node.textContent = copy[node.dataset.t]; });
-  labelNodes.forEach(node => { if (attributes[node.dataset.label]) node.setAttribute('aria-label', attributes[node.dataset.label]); });
-  altNodes.forEach(node => { if (attributes[node.dataset.alt]) node.alt = attributes[node.dataset.alt]; });
-  languageButton.textContent = language === 'ru' ? 'EN' : 'RU';
-  languageButton.setAttribute('aria-label', language === 'ru' ? 'Switch to English' : 'Переключить на русский');
-  document.title = 'Cozy apartments, old town';
-  document.querySelector('meta[name="description"]').content = language === 'ru'
-    ? 'Уютная квартира на улице Пилимо в центре Вильнюса. Фотографии, мини-кухня, Wi-Fi, удобства и бронирование на Airbnb.'
-    : 'A cosy apartment on Pylimo Street in central Vilnius. Real photographs, a kitchenette, Wi-Fi, amenities and booking through Airbnb.';
-  document.querySelectorAll('[data-airbnb]').forEach(link => {
-    link.href = `https://${language === 'ru' ? 'ru' : 'www'}.airbnb.com/rooms/1752366128630309756`;
+  const dict = translations[language];
+
+  $$('[data-i18n]').forEach(node => {
+    const key = node.dataset.i18n;
+    if(dict[key] !== undefined) node.textContent = dict[key];
   });
-  thumbnails.querySelectorAll('button').forEach((button,index) => {
-    button.setAttribute('aria-label', `${index+1}. ${photos[index][language]}`);
+
+  $$('[data-i18n-aria]').forEach(node => {
+    const key = node.dataset.i18nAria;
+    if(dict[key] !== undefined) node.setAttribute('aria-label', dict[key]);
   });
-  menu.setAttribute('aria-label', menu.getAttribute('aria-expanded') === 'true'
-    ? (language === 'ru' ? 'Закрыть меню' : 'Close menu') : attributes.menuLabel);
-  if (lightbox.open) showPhoto(photoIndex);
-  try { localStorage.setItem('pylimo-language', language); } catch (_) { /* Language stays available without storage. */ }
+
+  $$('[data-i18n-placeholder]').forEach(node => {
+    const key = node.dataset.i18nPlaceholder;
+    if(dict[key] !== undefined) node.placeholder = dict[key];
+  });
+
+  langCode.textContent = language.toUpperCase();
+  $$('[data-lang]').forEach(btn => btn.classList.toggle('active', btn.dataset.lang === language));
+
+  const airbnbHost = language === 'ru' ? 'ru.airbnb.com' : 'www.airbnb.com';
+  $$('[data-airbnb]').forEach(link => link.href = `https://${airbnbHost}/rooms/1752366128630309756`);
+
+  document.title = language === 'lt' ? 'Cozy Apartments · Vilnius' : 'Cozy Apartments · Vilnius';
+  const desc = {
+    ru:'Уютная квартира на улице Пилимо в центре Вильнюса. Фотографии, удобства, отзывы и бронирование через Airbnb.',
+    en:'A cosy apartment on Pylimo Street in central Vilnius. Photos, amenities, reviews and booking through Airbnb.',
+    lt:'Jaukūs apartamentai Pylimo gatvėje, Vilniaus centre. Nuotraukos, patogumai, atsiliepimai ir rezervacija per Airbnb.'
+  };
+  $('meta[name="description"]').content = desc[language];
+
+  updateMobileAria();
+  renderGalleryPhoto(photoIndex);
+  renderReviews();
+  safeStore('cozy-language-v2', language);
 }
 
-function closeMenu() {
-  navigation.classList.remove('open');
-  menu.setAttribute('aria-expanded','false');
-  menu.setAttribute('aria-label', language === 'ru' ? 'Открыть меню' : 'Open menu');
+function closeLanguageMenu(){
+  langMenu.classList.remove('open');
+  langTrigger.setAttribute('aria-expanded','false');
 }
 
-menu.addEventListener('click', () => {
-  const open = menu.getAttribute('aria-expanded') !== 'true';
-  navigation.classList.toggle('open',open);
-  menu.setAttribute('aria-expanded',String(open));
-  menu.setAttribute('aria-label', open ? (language === 'ru' ? 'Закрыть меню' : 'Close menu') : (language === 'ru' ? 'Открыть меню' : 'Open menu'));
-});
-navigation.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
-document.addEventListener('click', event => {
-  if (!navigation.contains(event.target) && !menu.contains(event.target)) closeMenu();
-});
-languageButton.addEventListener('click', () => setLanguage(language === 'ru' ? 'en' : 'ru'));
-
-photos.forEach((photo,index) => {
-  const button = document.createElement('button');
-  button.type = 'button';
-  button.className = 'thumbnail';
-  button.setAttribute('aria-label', `${index+1}. ${photo[language]}`);
-  const image = document.createElement('img');
-  image.src = `./assets/${photo.file}-small.webp`;
-  image.alt = '';
-  image.loading = 'lazy';
-  button.append(image);
-  button.addEventListener('click', () => showPhoto(index));
-  thumbnails.append(button);
+langTrigger.addEventListener('click', e => {
+  e.stopPropagation();
+  const open = !langMenu.classList.contains('open');
+  langMenu.classList.toggle('open', open);
+  langTrigger.setAttribute('aria-expanded', String(open));
 });
 
-function showPhoto(index) {
-  photoIndex = (index + photos.length) % photos.length;
-  const photo = photos[photoIndex];
-  lightboxImage.src = `./assets/${photo.file}.webp`;
-  lightboxImage.alt = photo[language];
-  titleElement.textContent = photo[language];
-  categoryElement.textContent = photo.area === 'apartment'
-    ? (language === 'ru' ? 'В КВАРТИРЕ' : 'IN THE APARTMENT')
-    : (language === 'ru' ? 'ЗДАНИЕ · ОБЩИЕ ЗОНЫ' : 'BUILDING · SHARED AREAS');
-  counterElement.textContent = `${String(photoIndex+1).padStart(2,'0')} / ${photos.length}`;
-  thumbnails.querySelectorAll('button').forEach((button,index) => button.setAttribute('aria-current', String(index === photoIndex)));
-  const selected = thumbnails.children[photoIndex];
-  if (selected && lightbox.open) {
-    const target = selected.offsetLeft - thumbnails.offsetLeft - thumbnails.clientWidth/2 + selected.offsetWidth/2;
-    thumbnails.scrollTo({left:Math.max(0,target),behavior:'instant'});
+$$('[data-lang]').forEach(btn => btn.addEventListener('click', () => {
+  setLanguage(btn.dataset.lang);
+  closeLanguageMenu();
+}));
+
+document.addEventListener('click', e => {
+  if(!langMenu.contains(e.target) && !langTrigger.contains(e.target)) closeLanguageMenu();
+});
+
+function updateMobileAria(){
+  const open = mobileButton.getAttribute('aria-expanded') === 'true';
+  mobileButton.setAttribute('aria-label', translations[language][open ? 'closeMenu' : 'openMenu']);
+}
+
+function closeMobile(){
+  mobileMenu.classList.remove('open');
+  mobileButton.setAttribute('aria-expanded','false');
+  updateMobileAria();
+}
+
+mobileButton.addEventListener('click', () => {
+  const open = mobileButton.getAttribute('aria-expanded') !== 'true';
+  mobileMenu.classList.toggle('open', open);
+  mobileButton.setAttribute('aria-expanded', String(open));
+  updateMobileAria();
+});
+
+$$('#mobile-menu a').forEach(a => a.addEventListener('click', closeMobile));
+
+function updateScroll(){
+  const max = document.documentElement.scrollHeight - innerHeight;
+  const pct = max > 0 ? (scrollY / max) * 100 : 0;
+  progress.style.width = `${Math.min(100, Math.max(0,pct))}%`;
+  header.classList.toggle('scrolled', scrollY > 12);
+}
+addEventListener('scroll', updateScroll, {passive:true});
+updateScroll();
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+},{threshold:.12, rootMargin:'0px 0px -30px'});
+$$('.reveal').forEach(el => observer.observe(el));
+
+photoFiles.forEach((file, index) => {
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'gallery-thumb';
+  btn.setAttribute('aria-label', `${index + 1}`);
+  const img = document.createElement('img');
+  img.src = `./assets/${file}-small.webp`;
+  img.alt = '';
+  img.loading = 'lazy';
+  btn.append(img);
+  btn.addEventListener('click', () => renderGalleryPhoto(index));
+  galleryThumbs.append(btn);
+});
+
+function renderGalleryPhoto(index){
+  photoIndex = (index + photoFiles.length) % photoFiles.length;
+  const file = photoFiles[photoIndex];
+  galleryImage.src = `./assets/${file}.webp`;
+  galleryImage.alt = photoNames[file][language];
+  galleryCaption.textContent = photoNames[file][language];
+  galleryCounter.textContent = `${String(photoIndex+1).padStart(2,'0')} / ${photoFiles.length}`;
+  $$('.gallery-thumb').forEach((btn,i) => btn.classList.toggle('active', i === photoIndex));
+  const active = galleryThumbs.children[photoIndex];
+  if(active && galleryDialog.open) active.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});
+}
+
+$$('[data-open-gallery]').forEach(btn => btn.addEventListener('click', () => {
+  renderGalleryPhoto(Number(btn.dataset.openGallery || 0));
+  galleryDialog.showModal();
+  document.body.classList.add('dialog-open');
+}));
+
+$('#gallery-close').addEventListener('click', () => galleryDialog.close());
+$('#gallery-prev').addEventListener('click', () => renderGalleryPhoto(photoIndex - 1));
+$('#gallery-next').addEventListener('click', () => renderGalleryPhoto(photoIndex + 1));
+galleryDialog.addEventListener('close', () => document.body.classList.remove('dialog-open'));
+
+let touchStartX = null;
+galleryImage.addEventListener('touchstart', e => {
+  touchStartX = e.touches.length === 1 ? e.touches[0].clientX : null;
+},{passive:true});
+galleryImage.addEventListener('touchend', e => {
+  if(touchStartX === null || !e.changedTouches.length) return;
+  const dx = e.changedTouches[0].clientX - touchStartX;
+  if(Math.abs(dx) > 55) renderGalleryPhoto(photoIndex + (dx < 0 ? 1 : -1));
+  touchStartX = null;
+},{passive:true});
+
+document.addEventListener('keydown', e => {
+  if(galleryDialog.open){
+    if(e.key === 'ArrowLeft') renderGalleryPhoto(photoIndex - 1);
+    if(e.key === 'ArrowRight') renderGalleryPhoto(photoIndex + 1);
   }
-}
+  if(e.key === 'Escape'){
+    closeLanguageMenu();
+    closeMobile();
+  }
+});
 
-document.querySelectorAll('[data-photo]').forEach(button => {
-  button.addEventListener('click', () => {
-    opener = button;
-    showPhoto(Number(button.dataset.photo));
-    lightbox.showModal();
-    document.body.classList.add('dialog-open');
-    document.getElementById('lightbox-close').focus({preventScroll:true});
-    showPhoto(photoIndex);
+function setRating(value){
+  rating = Number(value);
+  $('#rating-value').value = rating;
+  $$('#star-rating button').forEach(btn => {
+    btn.classList.toggle('active', Number(btn.dataset.rating) <= rating);
+    btn.setAttribute('aria-checked', String(Number(btn.dataset.rating) === rating));
+  });
+}
+$$('#star-rating button').forEach(btn => {
+  btn.setAttribute('role','radio');
+  btn.addEventListener('click', () => setRating(btn.dataset.rating));
+  btn.addEventListener('mouseenter', () => {
+    $$('#star-rating button').forEach(star => star.classList.toggle('active', Number(star.dataset.rating) <= Number(btn.dataset.rating)));
   });
 });
-document.getElementById('lightbox-close').addEventListener('click', () => lightbox.close());
-document.getElementById('lightbox-prev').addEventListener('click', () => showPhoto(photoIndex-1));
-document.getElementById('lightbox-next').addEventListener('click', () => showPhoto(photoIndex+1));
-lightbox.addEventListener('close', () => {
-  document.body.classList.remove('dialog-open');
-  opener?.focus({preventScroll:true});
+$('#star-rating').addEventListener('mouseleave', () => setRating(rating));
+
+function openReview(){
+  reviewError.textContent = '';
+  reviewDialog.showModal();
+  document.body.classList.add('dialog-open');
+  setTimeout(() => $('#review-name').focus(), 20);
+}
+$$('[data-review-open]').forEach(btn => btn.addEventListener('click', openReview));
+$('#review-close').addEventListener('click', () => reviewDialog.close());
+reviewDialog.addEventListener('close', () => document.body.classList.remove('dialog-open'));
+
+reviewText.addEventListener('input', () => reviewCount.textContent = reviewText.value.length);
+
+function getReviews(){
+  try{
+    const data = JSON.parse(safeRead('cozy-reviews-v1','[]'));
+    return Array.isArray(data) ? data : [];
+  }catch(_){ return []; }
+}
+
+function dateForReview(timestamp){
+  const locale = language === 'ru' ? 'ru-RU' : language === 'lt' ? 'lt-LT' : 'en-GB';
+  try{
+    return new Intl.DateTimeFormat(locale,{year:'numeric',month:'short',day:'numeric'}).format(new Date(timestamp));
+  }catch(_){ return ''; }
+}
+
+function renderReviews(){
+  const reviews = getReviews();
+  reviewsList.innerHTML = '';
+  reviewsEmpty.hidden = reviews.length > 0;
+
+  reviews.slice().reverse().forEach(review => {
+    const card = document.createElement('article');
+    card.className = 'review-card';
+
+    const stars = document.createElement('div');
+    stars.className = 'stars';
+    stars.textContent = '★'.repeat(review.rating) + '☆'.repeat(5-review.rating);
+
+    const quote = document.createElement('blockquote');
+    quote.textContent = review.text;
+
+    const footer = document.createElement('footer');
+    const name = document.createElement('strong');
+    name.textContent = review.name || translations[language].guest;
+    const date = document.createElement('span');
+    date.textContent = dateForReview(review.createdAt);
+
+    footer.append(name,date);
+    card.append(stars,quote,footer);
+    reviewsList.append(card);
+  });
+}
+
+reviewForm.addEventListener('submit', e => {
+  e.preventDefault();
+  const name = $('#review-name').value.trim();
+  const text = reviewText.value.trim();
+
+  if(rating < 1){
+    reviewError.textContent = translations[language].ratingError;
+    return;
+  }
+  if(!name || !text){
+    reviewError.textContent = translations[language].formError;
+    return;
+  }
+
+  const reviews = getReviews();
+  reviews.push({name:name.slice(0,50), text:text.slice(0,600), rating, createdAt:Date.now()});
+  safeStore('cozy-reviews-v1', JSON.stringify(reviews.slice(-30)));
+  renderReviews();
+
+  reviewForm.reset();
+  reviewCount.textContent = '0';
+  setRating(0);
+  reviewError.textContent = '';
+  reviewDialog.close();
+  showToast(translations[language].reviewSaved);
+  document.querySelector('#reviews').scrollIntoView({behavior:'smooth',block:'start'});
 });
-document.addEventListener('keydown', event => {
-  if (event.key === 'Escape') closeMenu();
-  if (!lightbox.open) return;
-  if (event.key === 'ArrowLeft') { event.preventDefault(); showPhoto(photoIndex-1); }
-  if (event.key === 'ArrowRight') { event.preventDefault(); showPhoto(photoIndex+1); }
-});
-let touchStart = null;
-lightboxImage.addEventListener('touchstart',event => {
-  touchStart = event.touches.length === 1 ? {x:event.touches[0].clientX,y:event.touches[0].clientY} : null;
-},{passive:true});
-lightboxImage.addEventListener('touchend',event => {
-  if (!touchStart || !event.changedTouches.length) return;
-  const dx = event.changedTouches[0].clientX - touchStart.x;
-  const dy = event.changedTouches[0].clientY - touchStart.y;
-  if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy)*1.5) showPhoto(photoIndex + (dx<0 ? 1 : -1));
-  touchStart = null;
-},{passive:true});
-try {
-  const savedLanguage = localStorage.getItem('pylimo-language');
-  if (savedLanguage === 'en' || savedLanguage === 'ru') setLanguage(savedLanguage);
-} catch (_) { /* The default Russian page works without storage. */ }
+
+let toastTimer;
+function showToast(message){
+  toast.textContent = message;
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('show'), 3200);
+}
+
+$('#year').textContent = new Date().getFullYear();
+
+const savedLanguage = safeRead('cozy-language-v2','ru');
+setLanguage(['ru','en','lt'].includes(savedLanguage) ? savedLanguage : 'ru');
+renderGalleryPhoto(0);
+renderReviews();
