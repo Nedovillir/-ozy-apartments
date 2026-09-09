@@ -108,23 +108,59 @@ const translations = {
     namePlaceholder:'Vardas', reviewLabel:'Atsiliepimas', reviewPlaceholder:'Kas jums patiko?', publishReview:'Paskelbti atsiliepimą',
     storageNote:'Šioje versijoje atsiliepimas išsaugomas šio įrenginio naršyklėje.', ratingError:'Pasirinkite įvertinimą nuo 1 iki 5 žvaigždučių.',
     formError:'Įrašykite vardą ir atsiliepimo tekstą.', reviewSaved:'Ačiū! Atsiliepimas pridėtas šiame įrenginyje.', guest:'Svečias'
+  },
+  de: {
+    skip:'Zum Inhalt', mainNav:'Hauptnavigation', openMenu:'Menü öffnen', closeMenu:'Menü schließen',
+    navAbout:'Apartment', navAmenities:'Ausstattung', navGallery:'Galerie', navReviews:'Bewertungen', navLocation:'Lage',
+    book:'Buchen', heroEyebrow:'IHR ORT IN VILNIUS', heroTitle1:'Ein kleines Apartment.', heroTitle2:'Ein großes Gefühl von Gemütlichkeit.',
+    heroText:'Ein helles Dachgeschoss-Apartment in der Pylimo-Straße — ganz in der Nähe der Altstadt, der Bahnhöfe, Cafés und schöner Spazierwege.',
+    chooseDates:'Daten wählen', seePhotos:'Fotos ansehen', heroMetaCenter:'Stadtzentrum', heroMetaWifi:'kostenlos',
+    heroMetaCheckin:'Schlüsselsafe', openApartmentPhoto:'Apartmentfoto öffnen', openKitchenPhoto:'Küchenfoto öffnen', openWindowPhoto:'Fensteransicht öffnen',
+    insideApartment:'Im Apartment', vilniusLithuania:'Vilnius, Litauen', featureCenter:'Zentrum von Vilnius',
+    featureCenterSub:'Pylimo, nahe der Altstadt', featureKitchen:'Kochnische', featureKitchenSub:'Wasserkocher, Geschirr, Kaffee und Tee',
+    featureLift:'Aufzug', featureLiftSub:'im Gebäude', featureBathroom:'Eigenes Bad', featureBathroomSub:'Dusche, Handtücher und Bettwäsche', locationHint:'Öffnen Sie die Karte, um die genaue Lage des Apartments zu sehen.',
+    goodFor:'PERFEKT FÜR', goodForText:'Paare · Geschäftsreisen · kurze Städtereisen', aboutEyebrow:'EIN ORT FÜR IHRE REISE',
+    aboutTitle:'Alles, was Sie brauchen. Nichts Überflüssiges.', aboutText1:'Warmes Licht, ein Dachfenster, ein bequemer Schlafplatz und eine kleine Küche schaffen eine ruhige Atmosphäre nach einem Tag in der Stadt.',
+    aboutText2:'Das Apartment befindet sich in der Pylimo-Straße im ehemaligen Hotel-Aleksa-Gebäude. Die Lage ist praktisch für das Zentrum, die Bahnhöfe und die wichtigsten Sehenswürdigkeiten.',
+    viewAmenities:'Alle Ausstattungen ansehen', amenitiesEyebrow:'KOMFORT IM DETAIL', amenitiesTitle:'Alles ist für Ihre Ankunft bereit.',
+    amenitiesLead:'Reisen Sie leicht — die wichtigsten Dinge warten bereits im Apartment auf Sie.', aBed:'Schlafsofa',
+    aBedText:'Ein Doppel-Schlafplatz für einen angenehmen Aufenthalt.', aKitchen:'Kochnische', aKitchenText:'Geschirr, Wasserkocher und alles für ein einfaches Frühstück.',
+    aWifi:'Kostenloses Wi‑Fi', aWifiText:'Für Arbeit, Nachrichten und Routenplanung.', aTv:'Fernseher',
+    aTvText:'Für einen ruhigen Abend nach dem Spaziergang.', aBath:'Eigenes Bad', aBathText:'Eine eigene Dusche direkt im Apartment.',
+    aLinen:'Bettwäsche und Handtücher', aLinenText:'Vor Ihrer Anreise vorbereitet.', aCoffee:'Kaffee und Tee',
+    aCoffeeText:'Ein kleines Extra für einen angenehmen Morgen.', aLift:'Aufzug', aLiftText:'Bequemer Zugang zur Etage des Apartments.',
+    galleryEyebrow:'SEHEN SIE NÄHER HIN', galleryTitle:'Das Apartment im Detail.', allPhotos:'Alle 13 Fotos', gApartment:'Innenraum',
+    gKitchen:'Kochnische', gBathroom:'Badezimmer', gWindow:'Fensterblick', gBuilding:'Gebäude', reviewsEyebrow:'GÄSTEBEWERTUNGEN',
+    reviewsTitle:'Teilen Sie Ihren Eindruck.', reviewsLead:'Wenn Sie bereits bei uns übernachtet haben, hinterlassen Sie ein paar Worte — das hilft zukünftigen Gästen.',
+    leaveReview:'Bewertung abgeben', reviewsEmptyTitle:'Ihre Bewertungen erscheinen hier',
+    reviewsEmptyText:'Seien Sie der erste Gast, der auf dieser Website einen Eindruck teilt.', locationEyebrow:'DIE STADT BEGINNT DIREKT VOR DER TÜR',
+    locationTitle1:'Pylimo.', locationTitle2:'Ein praktischer Ausgangspunkt für Vilnius.', locationText:'Altstadt, Cafés, Restaurants sowie Bus- und Bahnhof liegen in der Nähe — praktisch sowohl für Spaziergänge als auch für kurze Geschäftsreisen.',
+    formerHotel:'Gebäude des ehemaligen Hotel Aleksa', openMap:'In Karte öffnen', bookingEyebrow:'BEREIT FÜR DIE REISE?',
+    bookingTitle:'Wählen Sie Ihre Daten und kommen Sie nach Vilnius.', bookingText:'Aktuelle Preise, freie Termine und Buchungsbedingungen finden Sie auf Airbnb.',
+    bookAirbnb:'Auf Airbnb buchen', checkinText:'Self Check‑in · Schlüssel im Safe',
+    footerLine:'Ein kleiner Ort für eine gute Reise.', backTop:'Nach oben', galleryDialogLabel:'GALERIE', close:'Schließen',
+    previous:'Vorheriges Foto', next:'Nächstes Foto', reviewFormLabel:'IHR EINDRUCK', reviewFormTitle:'Bewertung abgeben',
+    reviewFormIntro:'Bewerten Sie Ihren Aufenthalt und schreiben Sie ein paar Worte über Ihre Reise.', ratingLabel:'Ihre Bewertung', nameLabel:'Ihr Name',
+    namePlaceholder:'Name', reviewLabel:'Bewertung', reviewPlaceholder:'Was hat Ihnen gefallen?', publishReview:'Bewertung veröffentlichen',
+    storageNote:'In dieser Version wird die Bewertung im Browser dieses Geräts gespeichert.', ratingError:'Wählen Sie eine Bewertung von 1 bis 5 Sternen.',
+    formError:'Bitte geben Sie Ihren Namen und einen Bewertungstext ein.', reviewSaved:'Danke! Ihre Bewertung wurde auf diesem Gerät hinzugefügt.', guest:'Gast'
   }
 };
 
 const photoNames = {
-  window:{ru:'Вид из окна',en:'Window view',lt:'Vaizdas pro langą'},
-  apartment:{ru:'Интерьер квартиры',en:'Apartment interior',lt:'Apartamentų interjeras'},
-  kitchen:{ru:'Мини‑кухня',en:'Kitchenette',lt:'Mini virtuvė'},
-  dining:{ru:'Столик на двоих',en:'Table for two',lt:'Staliukas dviem'},
-  sofa:{ru:'Диван‑кровать',en:'Sofa bed',lt:'Sofa‑lova'},
-  shower:{ru:'Душ',en:'Shower',lt:'Dušas'},
-  bathroom:{ru:'Ванная комната',en:'Bathroom',lt:'Vonios kambarys'},
-  entrance:{ru:'Прихожая квартиры',en:'Apartment entrance',lt:'Apartamentų prieškambaris'},
-  building:{ru:'Вход в здание',en:'Building entrance',lt:'Įėjimas į pastatą'},
-  lobby:{ru:'Холл здания',en:'Building lobby',lt:'Pastato holas'},
-  stairs:{ru:'Лестница',en:'Staircase',lt:'Laiptinė'},
-  lift:{ru:'Лифт',en:'Elevator',lt:'Liftas'},
-  corridor:{ru:'Общий коридор',en:'Shared corridor',lt:'Bendras koridorius'}
+  window:{ru:'Вид из окна',en:'Window view',lt:'Vaizdas pro langą',de:'Fensterblick'},
+  apartment:{ru:'Интерьер квартиры',en:'Apartment interior',lt:'Apartamentų interjeras',de:'Apartment-Innenraum'},
+  kitchen:{ru:'Мини‑кухня',en:'Kitchenette',lt:'Mini virtuvė',de:'Kochnische'},
+  dining:{ru:'Столик на двоих',en:'Table for two',lt:'Staliukas dviem',de:'Tisch für zwei'},
+  sofa:{ru:'Диван‑кровать',en:'Sofa bed',lt:'Sofa‑lova',de:'Schlafsofa'},
+  shower:{ru:'Душ',en:'Shower',lt:'Dušas',de:'Dusche'},
+  bathroom:{ru:'Ванная комната',en:'Bathroom',lt:'Vonios kambarys',de:'Badezimmer'},
+  entrance:{ru:'Прихожая квартиры',en:'Apartment entrance',lt:'Apartamentų prieškambaris',de:'Apartment-Eingang'},
+  building:{ru:'Вход в здание',en:'Building entrance',lt:'Įėjimas į pastatą',de:'Gebäudeeingang'},
+  lobby:{ru:'Холл здания',en:'Building lobby',lt:'Pastato holas',de:'Gebäude-Lobby'},
+  stairs:{ru:'Лестница',en:'Staircase',lt:'Laiptinė',de:'Treppenhaus'},
+  lift:{ru:'Лифт',en:'Elevator',lt:'Liftas',de:'Aufzug'},
+  corridor:{ru:'Общий коридор',en:'Shared corridor',lt:'Bendras koridorius',de:'Gemeinsamer Flur'}
 };
 
 const photoFiles = Object.keys(photoNames);
@@ -165,7 +201,7 @@ function safeRead(key, fallback=null){
 }
 
 function setLanguage(next){
-  language = ['ru','en','lt'].includes(next) ? next : 'ru';
+  language = ['ru','en','lt','de'].includes(next) ? next : 'ru';
   document.documentElement.lang = language;
   const dict = translations[language];
 
@@ -194,7 +230,8 @@ function setLanguage(next){
   const desc = {
     ru:'Уютная квартира на улице Пилимо в центре Вильнюса. Фотографии, удобства, отзывы и бронирование через Airbnb.',
     en:'A cosy apartment on Pylimo Street in central Vilnius. Photos, amenities, reviews and booking through Airbnb.',
-    lt:'Jaukūs apartamentai Pylimo gatvėje, Vilniaus centre. Nuotraukos, patogumai, atsiliepimai ir rezervacija per Airbnb.'
+    lt:'Jaukūs apartamentai Pylimo gatvėje, Vilniaus centre. Nuotraukos, patogumai, atsiliepimai ir rezervacija per Airbnb.',
+    de:'Gemütliches Apartment in der Pylimo-Straße im Zentrum von Vilnius. Fotos, Ausstattung, Bewertungen und Buchung über Airbnb.'
   };
   $('meta[name="description"]').content = desc[language];
 
@@ -433,6 +470,6 @@ function showToast(message){
 $('#year').textContent = new Date().getFullYear();
 
 const savedLanguage = safeRead('cozy-language-v2','ru');
-setLanguage(['ru','en','lt'].includes(savedLanguage) ? savedLanguage : 'ru');
+setLanguage(['ru','en','lt','de'].includes(savedLanguage) ? savedLanguage : 'ru');
 renderGalleryPhoto(0);
 renderReviews();
