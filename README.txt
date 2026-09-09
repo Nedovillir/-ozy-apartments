@@ -1,6 +1,4 @@
-Version v6
-- Uses the approved dark Pinterest-style layout
-- Location section now uses the USER-UPLOADED wide building photo
-- Exact file: assets/location-building.webp
-- Gallery uses entrance.webp for the close-up building card
-- Includes all assets so the preview and GitHub Pages version match
+v8
+- Replaced location section photo with the edited clean building image
+- Changed address title to Улица Пилимо
+- Upload index.html and assets/location-building-clean.png
