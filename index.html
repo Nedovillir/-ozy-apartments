@@ -17,12 +17,9 @@
 
   <header class="site-header" id="site-header">
     <div class="nav-shell page-width">
-      <a class="brand" href="#top" aria-label="Cozy Apartments Vilnius">
-        <span class="brand-mark">C</span>
-        <span class="brand-copy">
-          <strong>Cozy Apartments</strong>
-          <small>PYLIMO · VILNIUS</small>
-        </span>
+      <a class="brand brand-wordmark" href="#top" aria-label="Cozy Apartments Vilnius">
+        <span class="brand-wordmark-main">COZY</span>
+        <span class="brand-wordmark-sub">APARTMENTS</span>
       </a>
 
       <nav class="desktop-nav" aria-label="Основная навигация" data-i18n-aria="mainNav">
@@ -108,22 +105,36 @@
       </div>
     </section>
 
-    <section class="feature-strip page-width reveal" aria-label="Главное о квартире">
+    <section class="feature-strip feature-strip-reference page-width reveal" aria-label="Главное о квартире">
       <div class="feature-card">
-        <span class="feature-icon">⌂</span>
+        <span class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none"><path d="M16 28s8-8.4 8-15a8 8 0 1 0-16 0c0 6.6 8 15 8 15Z"/><circle cx="16" cy="13" r="3.2"/></svg>
+        </span>
         <span><strong data-i18n="featureCenter">Центр Вильнюса</strong><small data-i18n="featureCenterSub">Пилимо, рядом со Старым городом</small></span>
       </div>
       <div class="feature-card">
-        <span class="feature-icon">☕</span>
+        <span class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none"><path d="M7 12h15v6a7 7 0 0 1-7 7h-1a7 7 0 0 1-7-7v-6Z"/><path d="M22 14h2.5a3.5 3.5 0 1 1 0 7H21"/><path d="M11 7c0 1.3-1 2-1 3M16 6c0 1.3-1 2-1 3M21 7c0 1.3-1 2-1 3"/></svg>
+        </span>
         <span><strong data-i18n="featureKitchen">Мини‑кухня</strong><small data-i18n="featureKitchenSub">кофе, чай, посуда, приборы</small></span>
       </div>
       <div class="feature-card">
-        <span class="feature-icon">↕</span>
-        <span><strong data-i18n="featureLift">Лифт</strong><small data-i18n="featureLiftSub">в здании</small></span>
+        <span class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none"><path d="M4.5 12.5a17.4 17.4 0 0 1 23 0"/><path d="M8.5 17a11.5 11.5 0 0 1 15 0"/><path d="M12.5 21.5a5.6 5.6 0 0 1 7 0"/><circle cx="16" cy="26" r="1.2" fill="currentColor" stroke="none"/></svg>
+        </span>
+        <span><strong data-i18n="featureWifi">Wi‑Fi</strong><small data-i18n="featureWifiSub">Быстрый и бесплатный интернет</small></span>
       </div>
       <div class="feature-card">
-        <span class="feature-icon">◌</span>
-        <span><strong data-i18n="featureBathroom">Своя ванная</strong><small data-i18n="featureBathroomSub">душ, полотенца и бельё</small></span>
+        <span class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none"><circle cx="12" cy="12" r="6"/><path d="m16.4 16.4 10 10M22 22l3-3M19 19l3-3"/></svg>
+        </span>
+        <span><strong data-i18n="featureCheckin">Самостоятельное заселение</strong><small data-i18n="featureCheckinSub">Мини‑сейф с ключом</small></span>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none"><path d="M5 17h22v9H5z"/><path d="M8 17v-5.5A3.5 3.5 0 0 1 11.5 8h9A3.5 3.5 0 0 1 24 11.5V17"/><path d="M9 14h6M17 14h6M6 26v2M26 26v2"/></svg>
+        </span>
+        <span><strong data-i18n="featureComfort">Комфортное проживание</strong><small data-i18n="featureComfortSub">Всё для вашего удобства</small></span>
       </div>
     </section>
 
@@ -220,62 +231,74 @@
     </section>
 
     <section class="location section page-width" id="location">
-      <div class="location-shell reveal">
-        <div class="location-copy">
+      <div class="location-reference reveal">
+        <div class="location-photo-panel">
+          <img src="./assets/location-building-final-clean-v2.png" alt="Здание на улице Пилимо" loading="lazy">
+        </div>
+
+        <div class="location-copy location-copy-reference">
           <div class="eyebrow"><span class="dot"></span><span data-i18n="locationEyebrow">ГОРОД НАЧИНАЕТСЯ ЗА ДВЕРЬЮ</span></div>
           <h2><span data-i18n="locationTitle1">Пилимо.</span><br><em data-i18n="locationTitle2">Удобная точка для Вильнюса.</em></h2>
           <p data-i18n="locationText">Старый город, кафе, рестораны, автобусный и железнодорожный вокзалы находятся неподалёку. Удобно и для прогулок, и для коротких деловых поездок.</p>
 
-          <div class="address-row">
-            <span class="pin-badge" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M12 21s6-6.2 6-11a6 6 0 1 0-12 0c0 4.8 6 11 6 11Z" stroke="currentColor" stroke-width="1.6"/>
-                <circle cx="12" cy="10" r="2.4" fill="currentColor"/>
-              </svg>
+          <div class="location-address-reference">
+            <span class="location-pin-line" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none"><path d="M16 28s8-8.4 8-15a8 8 0 1 0-16 0c0 6.6 8 15 8 15Z"/><circle cx="16" cy="13" r="3.2"/></svg>
             </span>
-            <div>
-              <strong>Улица Пилимо</strong>
-              <small data-i18n="formerHotel">Здание бывшего Hotel Aleksa</small>
-            </div>
+            <div><strong>Улица Пилимо</strong><small data-i18n="formerHotel">Здание бывшего Hotel Aleksa</small></div>
           </div>
 
-          <a class="button button-solid" href="https://maps.app.goo.gl/U93WvuBuHhibpBc29" target="_blank" rel="noopener noreferrer">
+          <a class="button button-solid location-map-button" href="https://maps.app.goo.gl/U93WvuBuHhibpBc29" target="_blank" rel="noopener noreferrer">
             <span data-i18n="openMap">Открыть на карте</span><span>↗</span>
           </a>
-          <p class="location-hint" data-i18n="locationHint">Откройте карту, чтобы увидеть точное расположение квартиры.</p>
         </div>
 
-        <div class="location-image">
-          <img src="./assets/location-building-final-clean-v2.png" alt="Вход в здание" loading="lazy">
-          <div class="image-badge">Vilnius</div>
-        </div>
+        <aside class="location-side-note" aria-hidden="true">
+          <span>ИСТОРИЯ</span>
+          <span>КУЛЬТУРА</span>
+          <span>КАФЕ</span>
+          <span>ПРОГУЛКИ</span>
+          <i></i>
+          <strong>ВСЁ РЯДОМ</strong>
+        </aside>
       </div>
     </section>
 
     <section class="booking section page-width reveal" id="booking">
-      <div class="booking-card">
-        <div>
+      <div class="booking-card booking-reference">
+        <div class="booking-copy-reference">
           <span class="mini-label" data-i18n="bookingEyebrow">ГОТОВЫ К ПОЕЗДКЕ?</span>
           <h2 data-i18n="bookingTitle">Выберите даты и приезжайте в Вильнюс.</h2>
-          <p data-i18n="bookingText">Актуальную стоимость, доступные даты и условия бронирования можно посмотреть на Airbnb.</p>
         </div>
-        <div class="booking-actions">
-          <a class="button button-accent" href="https://www.airbnb.com/rooms/1752366128630309756" target="_blank" rel="noopener noreferrer" data-airbnb><span data-i18n="bookAirbnb">Забронировать на Airbnb</span><span>↗</span></a>
-          <small data-i18n="checkinText">Самостоятельное заселение · ключ в мини‑сейфе</small>
+        <div class="booking-actions booking-actions-reference">
+          <a class="button button-solid" href="https://www.airbnb.com/rooms/1752366128630309756" target="_blank" rel="noopener noreferrer" data-airbnb><span data-i18n="bookAirbnb">Забронировать на Airbnb</span><span>↗</span></a>
         </div>
+        <div class="booking-city-note"><span>VILNIUS</span><i></i></div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="page-width footer-top">
-      <div class="brand footer-brand">
-        <span class="brand-mark">C</span>
-        <span class="brand-copy"><strong>Cozy Apartments</strong><small>PYLIMO · VILNIUS</small></span>
+  <footer class="footer footer-reference">
+    <div class="page-width footer-reference-main">
+      <a class="brand brand-wordmark footer-wordmark" href="#top" aria-label="Cozy Apartments Vilnius">
+        <span class="brand-wordmark-main">COZY</span>
+        <span class="brand-wordmark-sub">APARTMENTS</span>
+      </a>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#about" data-i18n="navAbout">О квартире</a>
+        <a href="#amenities" data-i18n="navAmenities">Удобства</a>
+        <a href="#gallery" data-i18n="navGallery">Галерея</a>
+        <a href="#location" data-i18n="navLocation">Расположение</a>
+        <a href="#reviews" data-i18n="navReviews">Отзывы</a>
+      </nav>
+
+      <div class="footer-links">
+        <a class="footer-airbnb" href="https://www.airbnb.com/rooms/1752366128630309756" target="_blank" rel="noopener noreferrer" data-airbnb>Airbnb ↗</a>
+        <a href="#top" class="back-top"><span data-i18n="backTop">Наверх</span> ↑</a>
       </div>
-      <a href="#top" class="back-top"><span data-i18n="backTop">Наверх</span> ↑</a>
     </div>
-    <div class="page-width footer-bottom"><span>© <span id="year"></span> Cozy Apartments</span><span>Vilnius · Lithuania</span></div>
+    <div class="page-width footer-bottom"><span>© <span id="year"></span> Cozy Apartments</span><span>PYLIMO · VILNIUS</span></div>
   </footer>
 
   <button class="floating-review" type="button" data-review-open aria-label="Оставить отзыв" data-i18n-aria="leaveReview">
