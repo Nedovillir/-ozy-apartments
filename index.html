@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f6f4ef">
+  <meta name="theme-color" content="#0d0f13">
   <meta name="description" content="Уютная квартира на улице Пилимо в центре Вильнюса. Фотографии, удобства, отзывы и бронирование через Airbnb.">
   <title>Cozy Apartments · Vilnius</title>
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
@@ -19,7 +19,10 @@
     <div class="nav-shell page-width">
       <a class="brand" href="#top" aria-label="Cozy Apartments Vilnius">
         <span class="brand-mark">C</span>
-        <span class="brand-copy"><strong>Cozy Apartments</strong><small>Pylimo · Vilnius</small></span>
+        <span class="brand-copy">
+          <strong>Cozy Apartments</strong>
+          <small>PYLIMO · VILNIUS</small>
+        </span>
       </a>
 
       <nav class="desktop-nav" aria-label="Основная навигация" data-i18n-aria="mainNav">
@@ -42,7 +45,7 @@
           </div>
         </div>
 
-        <a class="button button-dark header-book" href="https://www.airbnb.com/rooms/1752366128630309756" target="_blank" rel="noopener noreferrer" data-airbnb data-i18n="book">Забронировать</a>
+        <a class="button button-solid header-book" href="https://www.airbnb.com/rooms/1752366128630309756" target="_blank" rel="noopener noreferrer" data-airbnb data-i18n="book">Забронировать</a>
 
         <button class="mobile-menu-button" id="mobile-menu-button" type="button" aria-controls="mobile-menu" aria-expanded="false" data-i18n-aria="openMenu">
           <span></span><span></span>
@@ -57,89 +60,110 @@
         <a href="#gallery" data-i18n="navGallery">Галерея</a>
         <a href="#reviews" data-i18n="navReviews">Отзывы</a>
         <a href="#location" data-i18n="navLocation">Расположение</a>
-        <a class="button button-dark" href="https://www.airbnb.com/rooms/1752366128630309756" target="_blank" rel="noopener noreferrer" data-airbnb data-i18n="book">Забронировать</a>
+        <a class="button button-solid" href="https://www.airbnb.com/rooms/1752366128630309756" target="_blank" rel="noopener noreferrer" data-airbnb data-i18n="book">Забронировать</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
     <section class="hero page-width" id="top">
-      <div class="hero-copy reveal">
-        <div class="eyebrow"><span class="dot"></span><span data-i18n="heroEyebrow">ВАШЕ МЕСТО В ВИЛЬНЮСЕ</span></div>
-        <h1><span data-i18n="heroTitle1">Небольшая квартира.</span><br><em data-i18n="heroTitle2">Большое чувство уюта.</em></h1>
-        <p class="hero-text" data-i18n="heroText">Светлая мансардная квартира на улице Пилимо — рядом со Старым городом, вокзалами, кафе и прогулочными маршрутами.</p>
-        <div class="hero-cta">
-          <a class="button button-accent" href="https://www.airbnb.com/rooms/1752366128630309756" target="_blank" rel="noopener noreferrer" data-airbnb>
-            <span data-i18n="chooseDates">Выбрать даты</span><span aria-hidden="true">↗</span>
-          </a>
-          <button class="button button-ghost" type="button" data-open-gallery="0">
-            <span data-i18n="seePhotos">Смотреть фото</span><span aria-hidden="true">→</span>
+      <div class="hero-shell">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="dot"></span><span data-i18n="heroEyebrow">ВАШЕ МЕСТО В ВИЛЬНЮСЕ</span></div>
+          <h1><span data-i18n="heroTitle1">Небольшая квартира.</span><br><em data-i18n="heroTitle2">Большое чувство уюта.</em></h1>
+          <p class="hero-text" data-i18n="heroText">Светлая мансардная квартира на улице Пилимо — рядом со Старым городом, вокзалами, кафе и прогулочными маршрутами.</p>
+
+          <div class="hero-cta">
+            <a class="button button-accent" href="https://www.airbnb.com/rooms/1752366128630309756" target="_blank" rel="noopener noreferrer" data-airbnb>
+              <span data-i18n="chooseDates">Выбрать даты</span><span aria-hidden="true">↗</span>
+            </a>
+            <button class="button button-outline" type="button" data-open-gallery="0">
+              <span data-i18n="seePhotos">Смотреть фото</span><span aria-hidden="true">→</span>
+            </button>
+          </div>
+
+          <div class="hero-meta">
+            <span><b>Vilnius</b><small data-i18n="heroMetaCenter">центр города</small></span>
+            <span><b>Wi‑Fi</b><small data-i18n="heroMetaWifi">бесплатно</small></span>
+            <span><b>Self check‑in</b><small data-i18n="heroMetaCheckin">мини‑сейф с ключом</small></span>
+          </div>
+        </div>
+
+        <div class="hero-media reveal reveal-delay">
+          <button class="hero-photo hero-photo-main image-button" type="button" data-open-gallery="2" aria-label="Открыть фотографию кухни" data-i18n-aria="openKitchenPhoto">
+            <img src="./assets/kitchen.webp" alt="Мини-кухня" fetchpriority="high">
+            <span class="image-chip" data-i18n="gKitchen">Мини‑кухня</span>
+          </button>
+          <button class="hero-photo hero-photo-small image-button" type="button" data-open-gallery="1" aria-label="Открыть фотографию квартиры" data-i18n-aria="openApartmentPhoto">
+            <img src="./assets/apartment-small.webp" alt="Интерьер квартиры">
+            <span class="small-photo-label" data-i18n="gApartment">Интерьер</span>
           </button>
         </div>
-        <div class="hero-meta">
-          <span><b>Vilnius</b><small data-i18n="heroMetaCenter">центр города</small></span>
-          <span><b>Wi‑Fi</b><small data-i18n="heroMetaWifi">бесплатно</small></span>
-          <span><b>Self check‑in</b><small data-i18n="heroMetaCheckin">мини‑сейф с ключом</small></span>
-        </div>
-      </div>
-
-      <div class="hero-media reveal reveal-delay">
-        <button class="hero-photo hero-photo-main image-button" type="button" data-open-gallery="2" aria-label="Открыть фотографию кухни" data-i18n-aria="openKitchenPhoto">
-          <img src="./assets/kitchen.webp" alt="Мини-кухня" fetchpriority="high">
-          <span class="image-chip" data-i18n="gKitchen">Мини‑кухня</span>
-        </button>
-        <button class="hero-photo hero-photo-small image-button" type="button" data-open-gallery="0" aria-label="Открыть вид из окна" data-i18n-aria="openWindowPhoto">
-          <img src="./assets/window.webp" alt="Вид из окна">
-        </button>
-        <div class="floating-note"><span>54.6872° N</span><strong data-i18n="vilniusLithuania">Vilnius, Lithuania</strong></div>
       </div>
     </section>
 
     <section class="feature-strip page-width reveal" aria-label="Главное о квартире">
-      <div><span class="feature-icon">⌂</span><span><strong data-i18n="featureCenter">Центр Вильнюса</strong><small data-i18n="featureCenterSub">Пилимо, рядом со Старым городом</small></span></div>
-      <div><span class="feature-icon">☕</span><span><strong data-i18n="featureKitchen">Мини‑кухня</strong><small data-i18n="featureKitchenSub">чайник, посуда, кофе и чай</small></span></div>
-      <div><span class="feature-icon">↕</span><span><strong data-i18n="featureLift">Лифт</strong><small data-i18n="featureLiftSub">в здании</small></span></div>
-      <div><span class="feature-icon">◌</span><span><strong data-i18n="featureBathroom">Своя ванная</strong><small data-i18n="featureBathroomSub">душ, полотенца и бельё</small></span></div>
+      <div class="feature-card">
+        <span class="feature-icon">⌂</span>
+        <span><strong data-i18n="featureCenter">Центр Вильнюса</strong><small data-i18n="featureCenterSub">Пилимо, рядом со Старым городом</small></span>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">☕</span>
+        <span><strong data-i18n="featureKitchen">Мини‑кухня</strong><small data-i18n="featureKitchenSub">чайник, посуда, кофе и чай</small></span>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">↕</span>
+        <span><strong data-i18n="featureLift">Лифт</strong><small data-i18n="featureLiftSub">в здании</small></span>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">◌</span>
+        <span><strong data-i18n="featureBathroom">Своя ванная</strong><small data-i18n="featureBathroomSub">душ, полотенца и бельё</small></span>
+      </div>
     </section>
 
     <section class="about section page-width" id="about">
-      <div class="about-media reveal">
-        <button class="image-button about-image" type="button" data-open-gallery="3"><img src="./assets/dining.webp" alt="Столик на двоих" loading="lazy"></button>
-        <div class="about-card glass-card">
-          <span class="mini-label" data-i18n="goodFor">ИДЕАЛЬНО ДЛЯ</span>
-          <strong data-i18n="goodForText">пары · деловой поездки · короткого отдыха</strong>
+      <div class="section-label reveal"><span data-i18n="aboutEyebrow">ПРОСТРАНСТВО ДЛЯ ВАШЕЙ ПОЕЗДКИ</span></div>
+      <div class="editorial-grid">
+        <div class="editorial-copy reveal">
+          <h2 data-i18n="aboutTitle">Всё нужное — и ничего лишнего.</h2>
+          <p data-i18n="aboutText1">Тёплый свет, мансардное окно, удобное спальное место и небольшая кухня создают спокойную атмосферу после насыщенного дня в городе.</p>
+          <p data-i18n="aboutText2">Квартира находится на улице Пилимо, в здании бывшего Hotel Aleksa. Удобное расположение позволяет быстро добраться до центра, вокзалов и основных достопримечательностей.</p>
+          <a class="inline-link" href="#amenities"><span data-i18n="viewAmenities">Посмотреть все удобства</span><span>→</span></a>
         </div>
-      </div>
 
-      <div class="about-copy reveal">
-        <div class="eyebrow"><span class="dot"></span><span data-i18n="aboutEyebrow">ПРОСТРАНСТВО ДЛЯ ВАШЕЙ ПОЕЗДКИ</span></div>
-        <h2 data-i18n="aboutTitle">Всё нужное — и ничего лишнего.</h2>
-        <p data-i18n="aboutText1">Тёплый свет, мансардное окно, удобное спальное место и небольшая кухня создают спокойную атмосферу после насыщенного дня в городе.</p>
-        <p data-i18n="aboutText2">Квартира находится на улице Пилимо, в здании бывшего Hotel Aleksa. Удобное расположение позволяет быстро добраться до центра, вокзалов и основных достопримечательностей.</p>
-        <a class="inline-link" href="#amenities"><span data-i18n="viewAmenities">Посмотреть все удобства</span><span>→</span></a>
+        <div class="editorial-media reveal reveal-delay">
+          <button class="image-button editorial-main" type="button" data-open-gallery="3">
+            <img src="./assets/dining.webp" alt="Столик на двоих" loading="lazy">
+          </button>
+          <button class="image-button editorial-floating" type="button" data-open-gallery="0">
+            <img src="./assets/window.webp" alt="Вид из окна" loading="lazy">
+          </button>
+          <div class="editorial-note">
+            <span class="mini-label" data-i18n="goodFor">ИДЕАЛЬНО ДЛЯ</span>
+            <strong data-i18n="goodForText">пары · деловой поездки · короткого отдыха</strong>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="amenities section" id="amenities">
-      <div class="page-width">
-        <div class="section-head reveal">
-          <div>
-            <div class="eyebrow"><span class="dot"></span><span data-i18n="amenitiesEyebrow">КОМФОРТ В ДЕТАЛЯХ</span></div>
-            <h2 data-i18n="amenitiesTitle">Всё готово к вашему приезду.</h2>
-          </div>
-          <p data-i18n="amenitiesLead">Приезжайте налегке — основные вещи уже будут ждать вас в квартире.</p>
+    <section class="amenities section page-width" id="amenities">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow"><span class="dot"></span><span data-i18n="amenitiesEyebrow">КОМФОРТ В ДЕТАЛЯХ</span></div>
+          <h2 data-i18n="amenitiesTitle">Всё готово к вашему приезду.</h2>
         </div>
+        <p data-i18n="amenitiesLead">Приезжайте налегке — основные вещи уже будут ждать вас в квартире.</p>
+      </div>
 
-        <div class="amenities-grid">
-          <article class="amenity-card reveal"><span>⌂</span><h3 data-i18n="aBed">Диван‑кровать</h3><p data-i18n="aBedText">Двуспальное место для комфортного отдыха.</p></article>
-          <article class="amenity-card reveal"><span>◫</span><h3 data-i18n="aKitchen">Мини‑кухня</h3><p data-i18n="aKitchenText">Посуда, чайник и всё для простого завтрака.</p></article>
-          <article class="amenity-card reveal"><span>⌁</span><h3 data-i18n="aWifi">Бесплатный Wi‑Fi</h3><p data-i18n="aWifiText">Для работы, общения и планирования маршрутов.</p></article>
-          <article class="amenity-card reveal"><span>▣</span><h3 data-i18n="aTv">Телевизор</h3><p data-i18n="aTvText">Для спокойного вечера после прогулки.</p></article>
-          <article class="amenity-card reveal"><span>◌</span><h3 data-i18n="aBath">Своя ванная</h3><p data-i18n="aBathText">Душ находится прямо в квартире.</p></article>
-          <article class="amenity-card reveal"><span>≈</span><h3 data-i18n="aLinen">Бельё и полотенца</h3><p data-i18n="aLinenText">Подготовлены перед вашим приездом.</p></article>
-          <article class="amenity-card reveal"><span>☕</span><h3 data-i18n="aCoffee">Кофе и чай</h3><p data-i18n="aCoffeeText">Небольшой приятный бонус для вашего утра.</p></article>
-          <article class="amenity-card reveal"><span>↕</span><h3 data-i18n="aLift">Лифт</h3><p data-i18n="aLiftText">Удобный доступ к этажу квартиры.</p></article>
-        </div>
+      <div class="amenities-grid">
+        <article class="amenity-card reveal"><span>⌂</span><h3 data-i18n="aBed">Диван‑кровать</h3><p data-i18n="aBedText">Двуспальное место для комфортного отдыха.</p></article>
+        <article class="amenity-card reveal"><span>◫</span><h3 data-i18n="aKitchen">Мини‑кухня</h3><p data-i18n="aKitchenText">Посуда, чайник и всё для простого завтрака.</p></article>
+        <article class="amenity-card reveal"><span>⌁</span><h3 data-i18n="aWifi">Бесплатный Wi‑Fi</h3><p data-i18n="aWifiText">Для работы, общения и планирования маршрутов.</p></article>
+        <article class="amenity-card reveal"><span>▣</span><h3 data-i18n="aTv">Телевизор</h3><p data-i18n="aTvText">Для спокойного вечера после прогулки.</p></article>
+        <article class="amenity-card reveal"><span>◌</span><h3 data-i18n="aBath">Своя ванная</h3><p data-i18n="aBathText">Душ находится прямо в квартире.</p></article>
+        <article class="amenity-card reveal"><span>≈</span><h3 data-i18n="aLinen">Бельё и полотенца</h3><p data-i18n="aLinenText">Подготовлены перед вашим приездом.</p></article>
+        <article class="amenity-card reveal"><span>☕</span><h3 data-i18n="aCoffee">Кофе и чай</h3><p data-i18n="aCoffeeText">Небольшой приятный бонус для вашего утра.</p></article>
+        <article class="amenity-card reveal"><span>↕</span><h3 data-i18n="aLift">Лифт</h3><p data-i18n="aLiftText">Удобный доступ к этажу квартиры.</p></article>
       </div>
     </section>
 
@@ -149,49 +173,76 @@
           <div class="eyebrow"><span class="dot"></span><span data-i18n="galleryEyebrow">ПОСМОТРИТЕ БЛИЖЕ</span></div>
           <h2 data-i18n="galleryTitle">Квартира в деталях.</h2>
         </div>
-        <button class="button button-ghost" type="button" data-open-gallery="0"><span data-i18n="allPhotos">Все 13 фото</span><span>↗</span></button>
+        <button class="button button-outline" type="button" data-open-gallery="0"><span data-i18n="allPhotos">Все 13 фото</span><span>↗</span></button>
       </div>
 
-      <div class="bento-gallery reveal">
-        <button class="image-button bento-large" type="button" data-open-gallery="1"><img src="./assets/apartment.webp" alt="Интерьер квартиры" loading="lazy"><span data-i18n="gApartment">Интерьер</span></button>
-        <button class="image-button" type="button" data-open-gallery="2"><img src="./assets/kitchen.webp" alt="Мини-кухня" loading="lazy"><span data-i18n="gKitchen">Мини‑кухня</span></button>
-        <button class="image-button" type="button" data-open-gallery="6"><img src="./assets/bathroom.webp" alt="Ванная" loading="lazy"><span data-i18n="gBathroom">Ванная</span></button>
-        <button class="image-button" type="button" data-open-gallery="0"><img src="./assets/window.webp" alt="Вид из окна" loading="lazy"><span data-i18n="gWindow">Вид из окна</span></button>
-        <button class="image-button bento-wide" type="button" data-open-gallery="8"><img src="./assets/building.webp" alt="Здание" loading="lazy"><span data-i18n="gBuilding">Здание</span></button>
+      <div class="gallery-board reveal">
+        <button class="image-button gallery-card gallery-tall" type="button" data-open-gallery="1">
+          <img src="./assets/apartment.webp" alt="Интерьер квартиры" loading="lazy">
+          <span data-i18n="gApartment">Интерьер</span>
+        </button>
+        <button class="image-button gallery-card" type="button" data-open-gallery="2">
+          <img src="./assets/kitchen.webp" alt="Мини-кухня" loading="lazy">
+          <span data-i18n="gKitchen">Мини‑кухня</span>
+        </button>
+        <button class="image-button gallery-card" type="button" data-open-gallery="6">
+          <img src="./assets/bathroom.webp" alt="Ванная" loading="lazy">
+          <span data-i18n="gBathroom">Ванная</span>
+        </button>
+        <button class="image-button gallery-card gallery-wide" type="button" data-open-gallery="8">
+          <img src="./assets/building.webp" alt="Здание" loading="lazy">
+          <span data-i18n="gBuilding">Здание</span>
+        </button>
       </div>
     </section>
 
-    <section class="reviews section" id="reviews">
-      <div class="page-width">
-        <div class="reviews-head reveal">
-          <div>
-            <div class="eyebrow light"><span class="dot"></span><span data-i18n="reviewsEyebrow">ОТЗЫВЫ ГОСТЕЙ</span></div>
-            <h2 data-i18n="reviewsTitle">Поделитесь впечатлением.</h2>
-            <p data-i18n="reviewsLead">Если вы уже останавливались у нас, оставьте несколько слов — это поможет будущим гостям.</p>
-          </div>
-          <button class="button button-light" type="button" data-review-open><span data-i18n="leaveReview">Оставить отзыв</span><span>＋</span></button>
+    <section class="reviews section page-width" id="reviews">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow"><span class="dot"></span><span data-i18n="reviewsEyebrow">ОТЗЫВЫ ГОСТЕЙ</span></div>
+          <h2 data-i18n="reviewsTitle">Поделитесь впечатлением.</h2>
         </div>
-
-        <div class="reviews-list" id="reviews-list"></div>
-        <div class="reviews-empty" id="reviews-empty">
-          <span>☆</span>
-          <strong data-i18n="reviewsEmptyTitle">Здесь появятся ваши отзывы</strong>
-          <p data-i18n="reviewsEmptyText">Будьте первым гостем, который поделится впечатлением на этом сайте.</p>
-        </div>
+        <button class="button button-accent" type="button" data-review-open><span data-i18n="leaveReview">Оставить отзыв</span><span>＋</span></button>
+      </div>
+      <p class="section-intro reveal" data-i18n="reviewsLead">Если вы уже останавливались у нас, оставьте несколько слов — это поможет будущим гостям.</p>
+      <div class="reviews-list" id="reviews-list"></div>
+      <div class="reviews-empty" id="reviews-empty">
+        <span>☆</span>
+        <strong data-i18n="reviewsEmptyTitle">Здесь появятся ваши отзывы</strong>
+        <p data-i18n="reviewsEmptyText">Будьте первым гостем, который поделится впечатлением на этом сайте.</p>
       </div>
     </section>
 
     <section class="location section page-width" id="location">
-      <div class="location-card reveal">
+      <div class="location-shell reveal">
         <div class="location-copy">
           <div class="eyebrow"><span class="dot"></span><span data-i18n="locationEyebrow">ГОРОД НАЧИНАЕТСЯ ЗА ДВЕРЬЮ</span></div>
           <h2><span data-i18n="locationTitle1">Пилимо.</span><br><em data-i18n="locationTitle2">Удобная точка для Вильнюса.</em></h2>
           <p data-i18n="locationText">Старый город, кафе, рестораны, автобусный и железнодорожный вокзалы находятся неподалёку. Удобно и для прогулок, и для коротких деловых поездок.</p>
-          <div class="address-row"><span>⌖</span><div><strong>Pylimo g., Vilnius</strong><small data-i18n="formerHotel">Здание бывшего Hotel Aleksa</small></div></div>
-          <a class="button button-dark" href="https://maps.app.goo.gl/U93WvuBuHhibpBc29" target="_blank" rel="noopener noreferrer"><span data-i18n="openMap">Открыть на карте</span><span>↗</span></a>
+
+          <div class="address-row">
+            <span class="pin-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M12 21s6-6.2 6-11a6 6 0 1 0-12 0c0 4.8 6 11 6 11Z" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="12" cy="10" r="2.4" fill="currentColor"/>
+              </svg>
+            </span>
+            <div>
+              <strong>Pylimo g., Vilnius</strong>
+              <small data-i18n="formerHotel">Здание бывшего Hotel Aleksa</small>
+            </div>
+          </div>
+
+          <a class="button button-solid" href="https://maps.app.goo.gl/U93WvuBuHhibpBc29" target="_blank" rel="noopener noreferrer">
+            <span data-i18n="openMap">Открыть на карте</span><span>↗</span>
+          </a>
           <p class="location-hint" data-i18n="locationHint">Откройте карту, чтобы увидеть точное расположение квартиры.</p>
         </div>
-        <div class="location-image"><img src="./assets/building.webp" alt="Вход в здание" loading="lazy"><span class="location-badge">Vilnius · LT</span></div>
+
+        <div class="location-image">
+          <img src="./assets/building.webp" alt="Вход в здание" loading="lazy">
+          <div class="image-badge">Vilnius</div>
+        </div>
       </div>
     </section>
 
@@ -212,7 +263,10 @@
 
   <footer class="footer">
     <div class="page-width footer-top">
-      <div class="brand footer-brand"><span class="brand-mark">C</span><span class="brand-copy"><strong>Cozy Apartments</strong><small>Pylimo · Vilnius</small></span></div>
+      <div class="brand footer-brand">
+        <span class="brand-mark">C</span>
+        <span class="brand-copy"><strong>Cozy Apartments</strong><small>PYLIMO · VILNIUS</small></span>
+      </div>
       <p data-i18n="footerLine">Небольшое место для хорошей поездки.</p>
       <a href="#top" class="back-top"><span data-i18n="backTop">Наверх</span> ↑</a>
     </div>
