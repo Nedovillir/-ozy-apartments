@@ -35,13 +35,19 @@
 
       <div class="nav-actions">
         <div class="language-picker">
-          <button class="language-trigger" id="language-trigger" type="button" aria-haspopup="true" aria-expanded="false">
-            <span id="language-code">RU</span><span class="chevron">⌄</span>
+          <button class="language-trigger" id="language-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Language">
+            <svg class="lang-globe" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M3.5 12h17" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M12 3c2.4 2.5 3.8 5.7 3.8 9S14.4 18.5 12 21c-2.4-2.5-3.8-5.7-3.8-9S9.6 5.5 12 3Z" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+            <span id="language-code">RU</span>
           </button>
           <div class="language-menu" id="language-menu" role="menu" aria-label="Language">
             <button type="button" data-lang="ru" role="menuitem">RU · Русский</button>
             <button type="button" data-lang="en" role="menuitem">EN · English</button>
             <button type="button" data-lang="lt" role="menuitem">LT · Lietuvių</button>
+            <button type="button" data-lang="de" role="menuitem">DE · Deutsch</button>
           </div>
         </div>
 
@@ -95,7 +101,7 @@
             <span class="image-chip" data-i18n="gKitchen">Мини‑кухня</span>
           </button>
           <button class="hero-photo hero-photo-small image-button" type="button" data-open-gallery="1" aria-label="Открыть фотографию квартиры" data-i18n-aria="openApartmentPhoto">
-            <img src="./assets/apartment-small.webp" alt="Интерьер квартиры">
+            <img src="./assets/apartment.webp" alt="Интерьер квартиры">
             <span class="small-photo-label" data-i18n="gApartment">Интерьер</span>
           </button>
         </div>
@@ -168,7 +174,7 @@
     </section>
 
     <section class="gallery section page-width" id="gallery">
-      <div class="section-head reveal">
+      <div class="section-head reveal gallery-head">
         <div>
           <div class="eyebrow"><span class="dot"></span><span data-i18n="galleryEyebrow">ПОСМОТРИТЕ БЛИЖЕ</span></div>
           <h2 data-i18n="galleryTitle">Квартира в деталях.</h2>
@@ -240,7 +246,7 @@
         </div>
 
         <div class="location-image">
-          <img src="./assets/building.webp" alt="Вход в здание" loading="lazy">
+          <img src="./assets/alexa-entrance-new.png" alt="Вход в здание Alexa" loading="lazy">
           <div class="image-badge">Vilnius</div>
         </div>
       </div>
