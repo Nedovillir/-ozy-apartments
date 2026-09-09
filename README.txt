@@ -1,4 +1,6 @@
-v9 final fix
-- Location block now uses assets/location-building-final-clean-v2.png (edited wide clean building photo)
-- Russian mini-kitchen texts fixed everywhere: кофе, чай, посуда, приборы
-- Replace index.html and app.js, and upload the new asset file
+v10
+- Removed kettle wording in RU/EN/LT/DE everywhere
+- Removed hotel building from gallery and gallery modal
+- Gallery now contains 12 photos
+- Replaced the gallery building tile with the sofa photo
+- Removed footer tagline
